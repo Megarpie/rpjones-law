@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Schedule a free confidential bankruptcy consultation with R. P. Jones Law in downtown Los Angeles.",
+    "Schedule a free confidential bankruptcy consultation with R. P. Jones Law by phone or video.",
 };
 
 export default function ContactPage() {
@@ -21,42 +21,24 @@ export default function ContactPage() {
         <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:px-8">
           <div>
             <h2 className="font-serif text-3xl text-navy">
-              Southern California office
+              Phone and video consultations
             </h2>
-            <address className="mt-4 not-italic leading-relaxed text-muted">
-              {site.addressLines.map((line) => (
-                <div key={line}>{line}</div>
-              ))}
-              <div className="mt-4">{site.hours}</div>
-            </address>
+            <p className="mt-4 leading-relaxed text-muted">
+              Get the legal guidance you need from the comfort and convenience of
+              your home. We offer confidential phone and video consultations,
+              making it easy to discuss your situation, understand your options,
+              and determine the best path forward.
+            </p>
+            <p className="mt-4 leading-relaxed text-muted">
+              Schedule a consultation at a time that works for you.
+            </p>
             <a
               href={site.phoneHref}
-              className="mt-6 block font-serif text-3xl text-navy"
+              className="mt-6 block leading-relaxed text-muted hover:text-navy"
             >
               {site.phone}
             </a>
-            <a
-              href={`mailto:${site.email}`}
-              className="text-gold hover:text-navy"
-            >
-              {site.email}
-            </a>
-            <a
-              href={site.mapUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-8 inline-block text-sm uppercase tracking-[0.16em] text-navy underline decoration-gold underline-offset-4"
-            >
-              Map &amp; directions
-            </a>
-            <div className="mt-10 overflow-hidden border border-navy/10">
-              <iframe
-                title="Office map"
-                className="h-64 w-full grayscale"
-                loading="lazy"
-                src="https://maps.google.com/maps?q=633%20West%205th%20Street%20Los%20Angeles%20CA&t=&z=15&ie=UTF8&iwloc=&output=embed"
-              />
-            </div>
+            <p className="mt-4 text-muted">{site.hours}</p>
           </div>
           <div className="bg-white p-6 sm:p-8">
             <h2 className="font-serif text-3xl text-navy">Write to the firm</h2>

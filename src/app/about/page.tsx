@@ -7,7 +7,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Meet R. P. Jones, Southern California bankruptcy attorney focused on Chapter 7, Chapter 13, and emergency debt relief.",
+    "Meet Ryan P. Jones, Southern California bankruptcy attorney focused on Chapter 7, Chapter 13, and emergency debt relief.",
 };
 
 export default function AboutPage() {
@@ -22,21 +22,21 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-7xl items-start gap-12 px-6 lg:grid-cols-12 lg:px-8">
           <Reveal className="lg:col-span-5">
             <Image
-              src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80"
-              alt="Client consultation at a law office"
-              width={900}
-              height={1125}
-              className="aspect-[4/5] w-full object-cover"
+              src="/images/ryan-p-jones.png"
+              alt="Ryan P. Jones, principal attorney"
+              width={1200}
+              height={900}
+              className="aspect-[4/5] w-full object-cover object-[center_22%]"
             />
           </Reveal>
           <Reveal className="lg:col-span-7" delay={80}>
-            <h2 className="font-serif text-4xl text-navy">R. P. Jones</h2>
+            <h2 className="font-serif text-4xl text-navy">Ryan P. Jones</h2>
             <p className="mt-2 text-sm uppercase tracking-[0.2em] text-gold">
               Principal attorney · Central District of California
             </p>
             <div className="mt-6 space-y-4 leading-relaxed text-muted">
               <p>
-                After two decades in Southern California courtrooms, R. P. Jones opened this
+                After two decades in Southern California courtrooms, Ryan P. Jones opened this
                 firm for a simple reason: families in financial distress were
                 being processed, not represented. Collection mills move fast.
                 Your lawyer should move faster—and still know your kids’ names.
@@ -48,9 +48,9 @@ export default function AboutPage() {
                 deliberate. Depth beats a dozen practice areas on a homepage.
               </p>
               <p>
-                Consultations are held in the downtown Los Angeles office or by
-                secure video. Emergency filings can be prepared the same day
-                when a foreclosure sale or garnishment is already in motion.
+                Consultations are held by phone or secure video. Emergency
+                filings can be prepared the same day when a foreclosure sale or
+                garnishment is already in motion.
               </p>
             </div>
             <div className="mt-10 grid gap-6 sm:grid-cols-2">

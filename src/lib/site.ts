@@ -1,17 +1,11 @@
 export const site = {
   name: "R. P. Jones Law",
-  attorney: "R. P. Jones",
+  attorney: "Ryan P. Jones",
   tagline: "Bankruptcy counsel for a genuine fresh start.",
   phone: "(949) 295-6082",
   phoneHref: "tel:+19492956082",
-  email: "consult@rpjones.law",
-  addressLines: [
-    "633 West 5th Street, Suite 2600",
-    "Los Angeles, California 90071",
-  ],
+  email: "consult@rpjoneslaw.com",
   hours: "Monday–Friday, 8:30 a.m.–6:00 p.m.",
-  mapUrl:
-    "https://www.google.com/maps?q=633+West+5th+Street,+Los+Angeles,+CA+90071",
 } as const;
 
 export const nav = [
@@ -44,13 +38,14 @@ export const practiceAreas = [
     title: "Chapter 7 Bankruptcy",
     eyebrow: "Liquidation",
     summary:
-      "Wipe out qualifying unsecured debt—credit cards, medical bills, and personal loans—and keep the property California law protects.",
+      "Wipe out qualifying unsecured debt—credit cards, medical bills, and personal loans—and keep the property California law protects. We also counsel on student loan debt relief, including when discharge, hardship, or a repayment plan is realistic.",
     image:
       "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80",
     points: [
       "Typically completed in four to six months",
       "Automatic stay stops lawsuits, garnishments, and collection calls",
       "California homestead and exemption planning built into every filing",
+      "Student loan review: discharge, hardship, and relief options under current law",
     ],
   },
   {

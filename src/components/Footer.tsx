@@ -51,12 +51,10 @@ export function Footer() {
         </div>
         <div>
           <h2 className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-gold">
-            Southern California office
+            Contact
           </h2>
-          <address className="mt-4 not-italic text-sm leading-relaxed text-cream/75">
-            {site.addressLines.map((line) => (
-              <div key={line}>{line}</div>
-            ))}
+          <div className="mt-4 text-sm leading-relaxed text-cream/75">
+            <p>Phone and video consultations across Southern California.</p>
             <div className="mt-3">{site.hours}</div>
             <a
               href={site.phoneHref}
@@ -67,7 +65,7 @@ export function Footer() {
             <a href={`mailto:${site.email}`} className="hover:text-gold-bright">
               {site.email}
             </a>
-          </address>
+          </div>
         </div>
       </div>
       <div className="border-t border-white/10 px-6 py-5 text-center text-xs leading-relaxed text-cream/50 lg:px-8">

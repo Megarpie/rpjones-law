@@ -23,7 +23,9 @@ export function ContactBand() {
             <a href={site.phoneHref} className="block text-2xl font-serif">
               {site.phone}
             </a>
-            <p>{site.addressLines.join(", ")}</p>
+            <a href={`mailto:${site.email}`} className="block text-navy">
+              {site.email}
+            </a>
             <p className="text-muted">{site.hours}</p>
           </div>
           <Link

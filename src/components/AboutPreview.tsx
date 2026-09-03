@@ -10,14 +10,14 @@ export function AboutPreview() {
           <div className="relative">
             <div className="absolute -left-4 -top-4 hidden h-full w-full border border-gold/50 lg:block" />
             <Image
-              src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1400&q=80"
-              alt="Attorney in a professional office setting"
-              width={900}
-              height={1125}
-              className="relative aspect-[4/5] w-full object-cover"
+              src="/images/ryan-p-jones.png"
+              alt="Ryan P. Jones, principal attorney"
+              width={1200}
+              height={900}
+              className="relative aspect-[4/5] w-full object-cover object-[center_22%]"
             />
             <div className="absolute bottom-6 left-6 right-6 bg-navy/95 p-5 text-cream">
-              <p className="font-serif text-2xl">R. P. Jones, Esq.</p>
+              <p className="font-serif text-2xl">Ryan P. Jones, Esq.</p>
               <p className="mt-1 text-xs uppercase tracking-[0.2em] text-gold">
                 Principal attorney
               </p>
