@@ -51,7 +51,7 @@ export function Footer() {
         </div>
         <div>
           <h2 className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-gold">
-            Houston office
+            Southern California office
           </h2>
           <address className="mt-4 not-italic text-sm leading-relaxed text-cream/75">
             {site.addressLines.map((line) => (

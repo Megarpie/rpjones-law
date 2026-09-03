@@ -7,7 +7,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Meet R. P. Jones, Houston bankruptcy attorney focused on Chapter 7, Chapter 13, and emergency debt relief.",
+    "Meet R. P. Jones, Southern California bankruptcy attorney focused on Chapter 7, Chapter 13, and emergency debt relief.",
 };
 
 export default function AboutPage() {
@@ -16,7 +16,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="The firm"
         title="Built for people who have already tried everything else."
-        lede="R. P. Jones Law is a Houston boutique devoted to consumer bankruptcy. We do not dabble. We file, we appear, and we stay until the discharge is entered."
+        lede="R. P. Jones Law is a Southern California boutique devoted to consumer bankruptcy. We do not dabble. We file, we appear, and we stay until the discharge is entered."
       />
       <section className="bg-cream py-20">
         <div className="mx-auto grid max-w-7xl items-start gap-12 px-6 lg:grid-cols-12 lg:px-8">
@@ -32,11 +32,11 @@ export default function AboutPage() {
           <Reveal className="lg:col-span-7" delay={80}>
             <h2 className="font-serif text-4xl text-navy">R. P. Jones</h2>
             <p className="mt-2 text-sm uppercase tracking-[0.2em] text-gold">
-              Principal attorney · Southern District of Texas
+              Principal attorney · Central District of California
             </p>
             <div className="mt-6 space-y-4 leading-relaxed text-muted">
               <p>
-                After two decades in Texas courtrooms, R. P. Jones opened this
+                After two decades in Southern California courtrooms, R. P. Jones opened this
                 firm for a simple reason: families in financial distress were
                 being processed, not represented. Collection mills move fast.
                 Your lawyer should move faster—and still know your kids’ names.
@@ -48,7 +48,7 @@ export default function AboutPage() {
                 deliberate. Depth beats a dozen practice areas on a homepage.
               </p>
               <p>
-                Consultations are held in the downtown Houston office or by
+                Consultations are held in the downtown Los Angeles office or by
                 secure video. Emergency filings can be prepared the same day
                 when a foreclosure sale or garnishment is already in motion.
               </p>
@@ -57,11 +57,11 @@ export default function AboutPage() {
               {[
                 {
                   h: "Admissions",
-                  p: "State Bar of Texas; U.S. District Court, Southern District of Texas; U.S. Bankruptcy Court.",
+                  p: "State Bar of California; U.S. District Court, Central District of California; U.S. Bankruptcy Court.",
                 },
                 {
                   h: "Education",
-                  p: "J.D., University of Houston Law Center. B.A., Texas A&M University.",
+                  p: "J.D., UCLA School of Law. B.A., University of Southern California.",
                 },
                 {
                   h: "Approach",
@@ -69,7 +69,7 @@ export default function AboutPage() {
                 },
                 {
                   h: "Community",
-                  p: "Pro bono discharge clinics and veteran financial-counseling partnerships in Harris County.",
+                  p: "Pro bono discharge clinics and veteran financial-counseling partnerships in Los Angeles County.",
                 },
               ].map((item) => (
                 <div key={item.h} className="border-t border-navy/15 pt-4">

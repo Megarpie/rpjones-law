@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Practice Areas",
   description:
-    "Chapter 7, Chapter 13, foreclosure defense, and wage garnishment representation in Houston, Texas.",
+    "Chapter 7, Chapter 13, foreclosure defense, and wage garnishment representation in Southern California.",
 };
 
 export default function PracticeAreasPage() {

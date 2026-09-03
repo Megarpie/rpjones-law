@@ -2,16 +2,16 @@ export const site = {
   name: "R. P. Jones Law",
   attorney: "R. P. Jones",
   tagline: "Bankruptcy counsel for a genuine fresh start.",
-  phone: "(713) 555-0194",
-  phoneHref: "tel:+17135550194",
+  phone: "(949) 295-6082",
+  phoneHref: "tel:+19492956082",
   email: "consult@rpjones.law",
   addressLines: [
-    "1000 Louisiana Street, Suite 2400",
-    "Houston, Texas 77002",
+    "633 West 5th Street, Suite 2600",
+    "Los Angeles, California 90071",
   ],
   hours: "Monday–Friday, 8:30 a.m.–6:00 p.m.",
   mapUrl:
-    "https://www.google.com/maps?q=1000+Louisiana+Street,+Houston,+TX+77002",
+    "https://www.google.com/maps?q=633+West+5th+Street,+Los+Angeles,+CA+90071",
 } as const;
 
 export const nav = [
@@ -44,13 +44,13 @@ export const practiceAreas = [
     title: "Chapter 7 Bankruptcy",
     eyebrow: "Liquidation",
     summary:
-      "Wipe out qualifying unsecured debt—credit cards, medical bills, and personal loans—and keep the property Texas law protects.",
+      "Wipe out qualifying unsecured debt—credit cards, medical bills, and personal loans—and keep the property California law protects.",
     image:
       "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80",
     points: [
       "Typically completed in four to six months",
       "Automatic stay stops lawsuits, garnishments, and collection calls",
-      "Texas homestead and exemption planning built into every filing",
+      "California homestead and exemption planning built into every filing",
     ],
   },
   {
@@ -100,7 +100,7 @@ export const practiceAreas = [
 export const stats = [
   { value: "$52M+", label: "Debt discharged for clients" },
   { value: "1,400+", label: "Families guided to relief" },
-  { value: "20", label: "Years in Texas courtrooms" },
+  { value: "20", label: "Years in Southern California courtrooms" },
   { value: "24 hrs", label: "Typical consult response" },
 ] as const;
 
@@ -132,32 +132,32 @@ export const testimonials = [
     quote:
       "I was two weeks from losing the house. Mr. Jones filed that afternoon. The sale stopped, the calls stopped, and for the first time in a year I slept through the night.",
     name: "Marisol V.",
-    role: "Chapter 13 · Houston",
+    role: "Chapter 13 · Los Angeles",
   },
   {
     quote:
       "Medical bills after my husband’s surgery had swallowed every paycheck. Chapter 7 wiped the cards and hospital debt. The process was explained in plain English at every step.",
     name: "James T.",
-    role: "Chapter 7 · Katy",
+    role: "Chapter 7 · Irvine",
   },
   {
     quote:
       "Other firms treated me like a file number. R. P. Jones actually read my paystubs, caught a garnishment I didn’t know was coming, and got it released.",
     name: "Danielle R.",
-    role: "Garnishment defense · Pearland",
+    role: "Garnishment defense · Long Beach",
   },
   {
     quote:
       "I own a small shop and was sure bankruptcy meant losing everything. We reorganized instead. The plan was realistic, and I still have my business.",
     name: "Omar S.",
-    role: "Chapter 13 · Sugar Land",
+    role: "Chapter 13 · Riverside",
   },
 ] as const;
 
 export const faqs = [
   {
     q: "Will I lose my house or car?",
-    a: "Most clients keep both. Texas exemptions, reaffirmation, and Chapter 13 plans are designed to protect a homestead and a necessary vehicle when the numbers work. We model this before any petition is filed.",
+    a: "Most clients keep both. California exemptions, reaffirmation, and Chapter 13 plans are designed to protect a homestead and a necessary vehicle when the numbers work. We model this before any petition is filed.",
   },
   {
     q: "How soon do collection calls stop?",
@@ -169,7 +169,7 @@ export const faqs = [
   },
   {
     q: "How long does Chapter 7 take?",
-    a: "An uncomplicated Chapter 7 in the Southern District of Texas is often completed in about four months from filing to discharge, after the required credit counseling and document work.",
+    a: "An uncomplicated Chapter 7 in the Central District of California is often completed in about four months from filing to discharge, after the required credit counseling and document work.",
   },
   {
     q: "Will my employer or neighbors find out?",
@@ -185,12 +185,12 @@ export const results = [
   {
     outcome: "Foreclosure sale halted in 36 hours",
     detail:
-      "Chapter 13 filed the morning of a Harris County substitute trustee sale. Client remained in the home and cured 11 months of arrears through the plan.",
+      "Chapter 13 filed the morning of a Los Angeles County trustee sale. Client remained in the home and cured 11 months of arrears through the plan.",
   },
   {
     outcome: "$87,400 in medical and card debt discharged",
     detail:
-      "Chapter 7 for a dual-income family after a cancer diagnosis. Homestead and both vehicles retained under Texas exemptions.",
+      "Chapter 7 for a dual-income family after a cancer diagnosis. Homestead and both vehicles retained under California exemptions.",
   },
   {
     outcome: "100% of wage garnishment released",

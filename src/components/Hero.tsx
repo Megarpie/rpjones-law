@@ -20,7 +20,7 @@ export function Hero() {
 
       <div className="relative mx-auto flex min-h-[88vh] max-w-7xl flex-col justify-center px-6 py-24 lg:px-8">
         <p className="animate-fade-up text-[0.72rem] font-semibold uppercase tracking-[0.38em] text-gold">
-          Houston bankruptcy attorneys
+          Southern California bankruptcy attorneys
         </p>
         <div className="mt-6 max-w-4xl">
           <h1 className="font-serif leading-[0.92] tracking-tight">

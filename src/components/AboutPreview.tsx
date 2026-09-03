@@ -29,7 +29,7 @@ export function AboutPreview() {
             A lawyer who still takes the call
           </p>
           <h2 className="mt-3 font-serif text-4xl text-navy lg:text-5xl">
-            Twenty years protecting Texas families from financial collapse.
+            Twenty years protecting Southern California families from financial collapse.
           </h2>
           <div className="mt-6 space-y-4 text-[1.05rem] leading-relaxed text-muted">
             <p>
@@ -40,8 +40,8 @@ export function AboutPreview() {
               every week.
             </p>
             <p>
-              Every petition is prepared by counsel, filed in the Southern
-              District of Texas, and argued with the same care we would want
+              Every petition is prepared by counsel, filed in the Central
+              District of California, and argued with the same care we would want
               for our own families. If Chapter 7 or 13 is not the right tool,
               you will hear that in the first meeting.
             </p>

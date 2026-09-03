@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org) site for **R. P. Jones Law**, a Houston bankruptcy boutique.
+This is a [Next.js](https://nextjs.org) site for **R. P. Jones Law**, a Southern California bankruptcy boutique.
 
 ```bash
 npm run dev

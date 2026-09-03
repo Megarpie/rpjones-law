@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Results",
   description:
-    "Representative bankruptcy results and client testimonials from R. P. Jones Law in Houston.",
+    "Representative bankruptcy results and client testimonials from R. P. Jones Law in Southern California.",
 };
 
 export default function ResultsPage() {

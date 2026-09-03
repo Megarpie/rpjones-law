@@ -24,7 +24,7 @@ export default function Home() {
                   body: "The automatic stay can halt lawsuits, garnishments, repossessions, and most foreclosure activity the day we file.",
                 },
                 {
-                  title: "Keep what Texas protects",
+                  title: "Keep what California protects",
                   body: "Homestead, vehicles, retirement, and household goods are planned around—not treated as an afterthought.",
                 },
                 {

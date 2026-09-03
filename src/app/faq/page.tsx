@@ -6,7 +6,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Answers to common questions about Chapter 7, Chapter 13, the automatic stay, and bankruptcy consultations in Houston.",
+    "Answers to common questions about Chapter 7, Chapter 13, the automatic stay, and bankruptcy consultations in Southern California.",
 };
 
 export default function FAQPage() {

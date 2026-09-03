@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Schedule a free confidential bankruptcy consultation with R. P. Jones Law in downtown Houston.",
+    "Schedule a free confidential bankruptcy consultation with R. P. Jones Law in downtown Los Angeles.",
 };
 
 export default function ContactPage() {
@@ -20,7 +20,9 @@ export default function ContactPage() {
       <section className="bg-cream py-20">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:px-8">
           <div>
-            <h2 className="font-serif text-3xl text-navy">Houston office</h2>
+            <h2 className="font-serif text-3xl text-navy">
+              Southern California office
+            </h2>
             <address className="mt-4 not-italic leading-relaxed text-muted">
               {site.addressLines.map((line) => (
                 <div key={line}>{line}</div>
@@ -52,7 +54,7 @@ export default function ContactPage() {
                 title="Office map"
                 className="h-64 w-full grayscale"
                 loading="lazy"
-                src="https://maps.google.com/maps?q=1000%20Louisiana%20Street%20Houston%20TX&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=633%20West%205th%20Street%20Los%20Angeles%20CA&t=&z=15&ie=UTF8&iwloc=&output=embed"
               />
             </div>
           </div>

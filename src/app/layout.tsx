@@ -19,14 +19,14 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: {
-    default: `${site.name} | Houston Bankruptcy Attorneys`,
+    default: `${site.name} | Southern California Bankruptcy Attorneys`,
     template: `%s | ${site.name}`,
   },
   description:
-    "R. P. Jones Law represents Houston families in Chapter 7, Chapter 13, foreclosure defense, and wage garnishment cases. Free confidential consultation.",
+    "R. P. Jones Law represents Southern California families in Chapter 7, Chapter 13, foreclosure defense, and wage garnishment cases. Free confidential consultation.",
   icons: { icon: "/favicon.svg" },
   openGraph: {
-    title: `${site.name} | Houston Bankruptcy Attorneys`,
+    title: `${site.name} | Southern California Bankruptcy Attorneys`,
     description:
       "Focused bankruptcy counsel. Stop collections, protect your home, and rebuild.",
     type: "website",

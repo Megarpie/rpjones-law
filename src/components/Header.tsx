@@ -41,7 +41,7 @@ function HeaderBar({ pathname }: { pathname: string }) {
       <div className="hidden border-b border-navy/8 bg-navy text-cream md:block">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 text-xs tracking-wide">
           <p className="text-cream/75">
-            Serving Houston &amp; the Southern District of Texas
+            Serving Los Angeles &amp; Southern California
           </p>
           <div className="flex items-center gap-6">
             <a
