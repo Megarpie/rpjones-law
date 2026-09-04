@@ -22,21 +22,21 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-7xl items-start gap-12 px-6 lg:grid-cols-12 lg:px-8">
           <Reveal className="lg:col-span-5">
             <Image
-              src="/images/ryan-p-jones.png"
+              src="/images/ryan-p-jones.jpg"
               alt="Ryan P. Jones, principal attorney"
-              width={1200}
-              height={900}
-              className="aspect-[4/5] w-full object-cover object-[center_22%]"
+              width={626}
+              height={1024}
+              className="aspect-[4/5] w-full object-cover object-top"
             />
           </Reveal>
           <Reveal className="lg:col-span-7" delay={80}>
             <h2 className="font-serif text-4xl text-navy">Ryan P. Jones</h2>
             <p className="mt-2 text-sm uppercase tracking-[0.2em] text-gold">
-              Principal attorney · Central District of California
+              Principal attorney · Central and Eastern Districts of California
             </p>
             <div className="mt-6 space-y-4 leading-relaxed text-muted">
               <p>
-                After two decades in Southern California courtrooms, Ryan P. Jones opened this
+                After 25+ years in Southern California courtrooms, Ryan P. Jones opened this
                 firm for a simple reason: families in financial distress were
                 being processed, not represented. Collection mills move fast.
                 Your lawyer should move faster—and still know your kids’ names.
@@ -57,11 +57,11 @@ export default function AboutPage() {
               {[
                 {
                   h: "Admissions",
-                  p: "State Bar of California; U.S. District Court, Central District of California; U.S. Bankruptcy Court.",
+                  p: "State Bar of California; U.S. District Court, Central and Eastern Districts of California; U.S. Bankruptcy Courts.",
                 },
                 {
                   h: "Education",
-                  p: "J.D., UCLA School of Law. B.A., University of Southern California.",
+                  p: "J.D., Santa Clara University School of Law.",
                 },
                 {
                   h: "Approach",

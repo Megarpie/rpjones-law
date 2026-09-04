@@ -28,7 +28,7 @@ export function Hero() {
               Over
             </span>
             <span className="animate-fade-up delay-2 -mt-1 block text-5xl text-gold-bright sm:text-7xl lg:text-8xl">
-              $52 Million
+              $25 Million
             </span>
             <span className="animate-fade-up delay-3 block text-4xl text-cream sm:text-6xl lg:text-7xl">
               in debt discharged.

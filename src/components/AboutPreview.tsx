@@ -10,11 +10,11 @@ export function AboutPreview() {
           <div className="relative">
             <div className="absolute -left-4 -top-4 hidden h-full w-full border border-gold/50 lg:block" />
             <Image
-              src="/images/ryan-p-jones.png"
+              src="/images/ryan-p-jones.jpg"
               alt="Ryan P. Jones, principal attorney"
-              width={1200}
-              height={900}
-              className="relative aspect-[4/5] w-full object-cover object-[center_22%]"
+              width={626}
+              height={1024}
+              className="relative aspect-[4/5] w-full object-cover object-top"
             />
             <div className="absolute bottom-6 left-6 right-6 bg-navy/95 p-5 text-cream">
               <p className="font-serif text-2xl">Ryan P. Jones, Esq.</p>
@@ -29,7 +29,7 @@ export function AboutPreview() {
             A lawyer who still takes the call
           </p>
           <h2 className="mt-3 font-serif text-4xl text-navy lg:text-5xl">
-            Twenty years protecting Southern California families from financial collapse.
+            25+ years protecting Southern California families from financial collapse.
           </h2>
           <div className="mt-6 space-y-4 text-[1.05rem] leading-relaxed text-muted">
             <p>

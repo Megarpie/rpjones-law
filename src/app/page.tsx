@@ -25,11 +25,11 @@ export default function Home() {
                 },
                 {
                   title: "Keep what California protects",
-                  body: "Homestead, vehicles, retirement, and household goods are planned around—not treated as an afterthought.",
+                  body: "Home, vehicles, retirement, and household goods are planned around—not treated as an afterthought.",
                 },
                 {
-                  title: "Counsel, not a mill",
-                  body: "You work with R. P. Jones. Strategy is explained in writing. Emergency filings are available when a sale is pending.",
+                  title: "Work directly with Ryan P. Jones",
+                  body: "Your case is handled by the attorney himself—not a mill or a rotating staff.",
                 },
               ].map((item) => (
                 <div key={item.title}>

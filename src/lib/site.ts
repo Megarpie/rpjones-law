@@ -2,8 +2,8 @@ export const site = {
   name: "R. P. Jones Law",
   attorney: "Ryan P. Jones",
   tagline: "Bankruptcy counsel for a genuine fresh start.",
-  phone: "(949) 295-6082",
-  phoneHref: "tel:+19492956082",
+  phone: "(951) 338-0025",
+  phoneHref: "tel:+19513380025",
   email: "consult@rpjoneslaw.com",
   hours: "Monday–Friday, 8:30 a.m.–6:00 p.m.",
 } as const;
@@ -93,9 +93,9 @@ export const practiceAreas = [
 ] as const;
 
 export const stats = [
-  { value: "$52M+", label: "Debt discharged for clients" },
-  { value: "1,400+", label: "Families guided to relief" },
-  { value: "20", label: "Years in Southern California courtrooms" },
+  { value: "$25M+", label: "Debt discharged for clients" },
+  { value: "500+", label: "Families guided to relief" },
+  { value: "25+", label: "Practicing in Southern California" },
   { value: "24 hrs", label: "Typical consult response" },
 ] as const;
 
