@@ -50,9 +50,8 @@ export default async function PracticeAreaPage({ params }: Props) {
             <p className="mt-8 leading-relaxed text-muted">
               We prepare the petition, means-test analysis, exemption schedule,
               and creditor matrix; appear at the meeting of creditors; and stay
-              on the matter until the stay is in place and the discharge—or
-              confirmed plan—is entered. You will know the likely outcome
-              before we file.
+              on the matter until the discharge—or confirmed plan—is entered.
+              You will know the likely outcome even before we file.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
               <Link

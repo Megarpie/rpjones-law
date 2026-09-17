@@ -16,6 +16,7 @@ export default function ContactPage() {
         eyebrow="Contact"
         title="Tell us what is hanging over you. We will tell you what we can do."
         lede="Same-day callbacks are the rule. If a foreclosure sale is already set, say so in the first sentence."
+        showCta={false}
       />
       <section className="bg-cream py-20">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:px-8">
@@ -42,10 +43,9 @@ export default function ContactPage() {
           </div>
           <div className="bg-white p-6 sm:p-8">
             <h2 className="font-serif text-3xl text-navy">Write to the firm</h2>
-            <p className="mt-2 mb-6 text-sm text-muted">
-              Do not include highly sensitive account numbers in this form.
-            </p>
-            <ContactForm />
+            <div className="mt-6">
+              <ContactForm />
+            </div>
           </div>
         </div>
       </section>

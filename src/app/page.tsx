@@ -6,7 +6,6 @@ import { PracticeGrid } from "@/components/PracticeGrid";
 import { Process } from "@/components/Process";
 import { Reveal } from "@/components/Reveal";
 import { StatsBar } from "@/components/StatsBar";
-import { Testimonials } from "@/components/Testimonials";
 import Link from "next/link";
 
 export default function Home() {
@@ -28,7 +27,7 @@ export default function Home() {
                   body: "Home, vehicles, retirement, and household goods are planned around—not treated as an afterthought.",
                 },
                 {
-                  title: "Work directly with Ryan P. Jones",
+                  title: "Work directly with Ryan Jones",
                   body: "Your case is handled by the attorney himself—not a mill or a rotating staff.",
                 },
               ].map((item) => (
@@ -46,7 +45,6 @@ export default function Home() {
       <PracticeGrid />
       <AboutPreview />
       <Process />
-      <Testimonials />
       <section className="bg-white py-20">
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
           <Reveal>

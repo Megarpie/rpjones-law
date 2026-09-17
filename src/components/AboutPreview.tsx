@@ -11,13 +11,13 @@ export function AboutPreview() {
             <div className="absolute -left-4 -top-4 hidden h-full w-full border border-gold/50 lg:block" />
             <Image
               src="/images/ryan-p-jones.jpg"
-              alt="Ryan P. Jones, principal attorney"
+              alt="Ryan Jones, principal attorney"
               width={626}
               height={1024}
               className="relative aspect-[4/5] w-full object-cover object-top"
             />
             <div className="absolute bottom-6 left-6 right-6 bg-navy/95 p-5 text-cream">
-              <p className="font-serif text-2xl">Ryan P. Jones, Esq.</p>
+              <p className="font-serif text-2xl">Ryan Jones, Esq.</p>
               <p className="mt-1 text-xs uppercase tracking-[0.2em] text-gold">
                 Principal attorney
               </p>
@@ -29,29 +29,28 @@ export function AboutPreview() {
             A lawyer who still takes the call
           </p>
           <h2 className="mt-3 font-serif text-4xl text-navy lg:text-5xl">
-            25+ years protecting Southern California families from financial collapse.
+            Protecting Southern California families from financial collapse.
           </h2>
           <div className="mt-6 space-y-4 text-[1.05rem] leading-relaxed text-muted">
             <p>
               Bankruptcy is not a failure. It is a federal legal right written
-              for people who have already tried everything else. R. P. Jones
-              built this firm around that truth—and around the belief that you
-              should never have to explain your story to a different intern
-              every week.
+              for people who have already tried everything else. Ryan Jones
+              built this firm around that truth, and around the belief, that you
+              should never have to explain your story to different staff every
+              week.
             </p>
             <p>
-              Every petition is prepared by counsel, filed in the Central
+              Every petition is prepared by counsel, filed in the Bankruptcy
               District of California, and argued with the same care we would want
-              for our own families. If Chapter 7 or 13 is not the right tool,
+              for our own families. If Chapter 7 or 13 is not right,
               you will hear that in the first meeting.
             </p>
           </div>
           <ul className="mt-8 grid gap-3 text-sm text-navy sm:grid-cols-2">
             {[
-              "Board-focused consumer bankruptcy practice",
-              "Same-day emergency filings when a sale is pending",
-              "Spanish-language consults available",
-              "Plain-English fee agreements, always in writing",
+              "Client focused consumer bankruptcy practice",
+              "Same day emergency filings when a sale is pending",
+              "Plain English fee agreements, always in writing",
             ].map((item) => (
               <li key={item} className="flex gap-2">
                 <span className="mt-1.5 h-1.5 w-1.5 shrink-0 bg-gold" />

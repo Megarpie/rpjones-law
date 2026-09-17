@@ -15,7 +15,7 @@ export default function FAQPage() {
       <PageHero
         eyebrow="FAQ"
         title="Straightforward answers before you file."
-        lede="Bring remaining questions to the consultation. Nothing here is legal advice for your specific facts."
+        lede="Bring all questions to the consultation. Nothing here should be construed as legal advice."
       />
       <section className="bg-cream py-20">
         <div className="mx-auto max-w-3xl px-6 lg:px-8">

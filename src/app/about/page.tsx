@@ -7,7 +7,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Meet Ryan P. Jones, Southern California bankruptcy attorney focused on Chapter 7, Chapter 13, and emergency debt relief.",
+    "Meet Ryan Jones, Southern California bankruptcy attorney focused on Chapter 7, Chapter 13, and emergency debt relief.",
 };
 
 export default function AboutPage() {
@@ -16,27 +16,27 @@ export default function AboutPage() {
       <PageHero
         eyebrow="The firm"
         title="Built for people who have already tried everything else."
-        lede="R. P. Jones Law is a Southern California boutique devoted to consumer bankruptcy. We do not dabble. We file, we appear, and we stay until the discharge is entered."
+        lede="R. P. Jones Law is a Southern California firm devoted to consumer bankruptcy. We do not dabble. We file, we appear, and we stay until the discharge is entered."
       />
       <section className="bg-cream py-20">
         <div className="mx-auto grid max-w-7xl items-start gap-12 px-6 lg:grid-cols-12 lg:px-8">
           <Reveal className="lg:col-span-5">
             <Image
               src="/images/ryan-p-jones.jpg"
-              alt="Ryan P. Jones, principal attorney"
+              alt="Ryan Jones, principal attorney"
               width={626}
               height={1024}
               className="aspect-[4/5] w-full object-cover object-top"
             />
           </Reveal>
           <Reveal className="lg:col-span-7" delay={80}>
-            <h2 className="font-serif text-4xl text-navy">Ryan P. Jones</h2>
+            <h2 className="font-serif text-4xl text-navy">Ryan Jones</h2>
             <p className="mt-2 text-sm uppercase tracking-[0.2em] text-gold">
               Principal attorney · Central and Eastern Districts of California
             </p>
             <div className="mt-6 space-y-4 leading-relaxed text-muted">
               <p>
-                After 25+ years in Southern California courtrooms, Ryan P. Jones opened this
+                After 25+ years in Southern California courtrooms, Ryan Jones opened this
                 firm for a simple reason: families in financial distress were
                 being processed, not represented. Collection mills move fast.
                 Your lawyer should move faster—and still know your kids’ names.
@@ -66,10 +66,6 @@ export default function AboutPage() {
                 {
                   h: "Approach",
                   p: "File only when it helps. Quote fees in writing. Return calls the same day.",
-                },
-                {
-                  h: "Community",
-                  p: "Pro bono discharge clinics and veteran financial-counseling partnerships in Los Angeles County.",
                 },
               ].map((item) => (
                 <div key={item.h} className="border-t border-navy/15 pt-4">

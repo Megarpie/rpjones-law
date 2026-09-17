@@ -4,10 +4,12 @@ export function PageHero({
   eyebrow,
   title,
   lede,
+  showCta = true,
 }: {
   eyebrow: string;
   title: string;
   lede?: string;
+  showCta?: boolean;
 }) {
   return (
     <section className="bg-navy text-cream">
@@ -23,12 +25,14 @@ export function PageHero({
             {lede}
           </p>
         ) : null}
-        <Link
-          href="/contact"
-          className="animate-fade-up delay-3 mt-8 inline-flex bg-gold px-6 py-3 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-navy transition hover:bg-gold-bright"
-        >
-          Request a consultation
-        </Link>
+        {showCta ? (
+          <Link
+            href="/contact"
+            className="animate-fade-up delay-3 mt-8 inline-flex bg-gold px-6 py-3 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-navy transition hover:bg-gold-bright"
+          >
+            Request a consultation
+          </Link>
+        ) : null}
       </div>
     </section>
   );
