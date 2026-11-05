@@ -1,3 +1,4 @@
+import { isValidUsPhone } from "@/lib/phone";
 import { site } from "@/lib/site";
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
@@ -24,6 +25,10 @@ export async function POST(request: Request) {
   }
 
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return NextResponse.json({ ok: false }, { status: 400 });
+  }
+
+  if (!isValidUsPhone(phone)) {
     return NextResponse.json({ ok: false }, { status: 400 });
   }
 

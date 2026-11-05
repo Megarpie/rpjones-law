@@ -1,11 +1,11 @@
 "use client";
 
+import { formatUsPhone, isValidUsPhone } from "@/lib/phone";
 import { useState, type FormEvent } from "react";
 
 const fields = [
   { name: "firstName", label: "First name", type: "text", required: true },
   { name: "lastName", label: "Last name", type: "text", required: true },
-  { name: "phone", label: "Phone", type: "tel", required: true },
   { name: "email", label: "Email", type: "email", required: true },
 ] as const;
 
@@ -13,9 +13,16 @@ export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
     "idle",
   );
+  const [phone, setPhone] = useState("");
+  const [phoneError, setPhoneError] = useState("");
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (!isValidUsPhone(phone)) {
+      setPhoneError("Enter a 10-digit U.S. phone number.");
+      return;
+    }
+    setPhoneError("");
     setStatus("sending");
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
@@ -28,6 +35,7 @@ export function ContactForm() {
       if (!res.ok) throw new Error("Failed");
       setStatus("sent");
       form.reset();
+      setPhone("");
     } catch {
       setStatus("error");
     }
@@ -48,7 +56,55 @@ export function ContactForm() {
   return (
     <form onSubmit={onSubmit} className="space-y-4">
       <div className="grid gap-4 sm:grid-cols-2">
-        {fields.map((field) => (
+        {fields.slice(0, 2).map((field) => (
+          <label key={field.name} className="block text-sm">
+            <span className="mb-1.5 block text-[0.7rem] uppercase tracking-[0.16em] text-muted">
+              {field.label}
+            </span>
+            <input
+              name={field.name}
+              type={field.type}
+              required={field.required}
+              className="w-full border border-navy/15 bg-white px-4 py-3 text-navy outline-none transition focus:border-gold"
+            />
+          </label>
+        ))}
+        <label className="block text-sm">
+          <span className="mb-1.5 block text-[0.7rem] uppercase tracking-[0.16em] text-muted">
+            Phone
+          </span>
+          <input
+            name="phone"
+            type="tel"
+            inputMode="numeric"
+            autoComplete="tel"
+            required
+            value={phone}
+            maxLength={14}
+            pattern="\(\d{3}\) \d{3}-\d{4}"
+            title="Enter a 10-digit U.S. phone number"
+            aria-invalid={phoneError ? true : undefined}
+            aria-describedby={phoneError ? "phone-error" : undefined}
+            onChange={(event) => {
+              const next = formatUsPhone(event.target.value);
+              setPhone(next);
+              event.target.setCustomValidity("");
+              if (phoneError && isValidUsPhone(next)) setPhoneError("");
+            }}
+            onInvalid={(event) => {
+              event.currentTarget.setCustomValidity(
+                "Enter a 10-digit U.S. phone number.",
+              );
+            }}
+            className="w-full border border-navy/15 bg-white px-4 py-3 text-navy outline-none transition focus:border-gold"
+          />
+          {phoneError ? (
+            <span id="phone-error" className="mt-1.5 block text-xs text-red-800">
+              {phoneError}
+            </span>
+          ) : null}
+        </label>
+        {fields.slice(2).map((field) => (
           <label key={field.name} className="block text-sm">
             <span className="mb-1.5 block text-[0.7rem] uppercase tracking-[0.16em] text-muted">
               {field.label}
