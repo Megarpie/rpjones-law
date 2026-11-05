@@ -38,8 +38,8 @@ export function ContactForm() {
       <div className="border border-gold/40 bg-cream p-8 text-navy">
         <p className="font-serif text-3xl">Thank you.</p>
         <p className="mt-3 leading-relaxed text-muted">
-          Your message is in our queue. A member of the firm will reach out
-          within one business day—sooner if you flagged an emergency filing.
+          Your message was sent to the firm. Someone will reach out within one
+          business day—sooner if you flagged an emergency filing.
         </p>
       </div>
     );

@@ -1,4 +1,11 @@
+import { site } from "@/lib/site";
 import { NextResponse } from "next/server";
+import { Resend } from "resend";
+
+function clean(value: unknown, max = 2000) {
+  if (typeof value !== "string") return "";
+  return value.replace(/[\r\n]+/g, " ").trim().slice(0, max);
+}
 
 export async function POST(request: Request) {
   const body = await request.json().catch(() => null);
@@ -6,19 +13,45 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false }, { status: 400 });
   }
 
-  const { firstName, lastName, phone, email, message } = body as Record<
-    string,
-    unknown
-  >;
+  const firstName = clean((body as Record<string, unknown>).firstName, 80);
+  const lastName = clean((body as Record<string, unknown>).lastName, 80);
+  const phone = clean((body as Record<string, unknown>).phone, 40);
+  const email = clean((body as Record<string, unknown>).email, 120);
+  const message = clean((body as Record<string, unknown>).message, 4000);
 
-  if (
-    typeof firstName !== "string" ||
-    typeof lastName !== "string" ||
-    typeof phone !== "string" ||
-    typeof email !== "string" ||
-    typeof message !== "string"
-  ) {
+  if (!firstName || !lastName || !phone || !email || !message) {
     return NextResponse.json({ ok: false }, { status: 400 });
+  }
+
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return NextResponse.json({ ok: false }, { status: 400 });
+  }
+
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    return NextResponse.json({ ok: false }, { status: 500 });
+  }
+
+  const resend = new Resend(apiKey);
+  const from =
+    process.env.CONTACT_FROM ?? "R. P. Jones Law <consult@rpjoneslaw.com>";
+
+  const { error } = await resend.emails.send({
+    from,
+    to: site.email,
+    replyTo: email,
+    subject: `New consultation request from ${firstName} ${lastName}`,
+    text: [
+      `Name: ${firstName} ${lastName}`,
+      `Phone: ${phone}`,
+      `Email: ${email}`,
+      "",
+      message,
+    ].join("\n"),
+  });
+
+  if (error) {
+    return NextResponse.json({ ok: false }, { status: 500 });
   }
 
   return NextResponse.json({ ok: true });
