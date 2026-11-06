@@ -14,7 +14,8 @@ export function AboutPreview() {
               alt="Ryan Jones, principal attorney"
               width={626}
               height={1024}
-              className="relative aspect-[4/5] w-full object-cover object-top"
+              unoptimized
+              className="relative h-auto w-full max-w-[626px] object-contain object-top"
             />
             <div className="absolute bottom-6 left-6 right-6 bg-navy/95 p-5 text-cream">
               <p className="font-serif text-2xl">Ryan Jones, Esq.</p>
