@@ -4,7 +4,7 @@ export const site = {
   tagline: "Bankruptcy counsel for a genuine fresh start.",
   phone: "(951) 338-0025",
   phoneHref: "tel:+19513380025",
-  email: "consult@rpjoneslaw.com",
+  email: "rpjlaw1@gmail.com",
   hours: "Monday–Friday, 8:30 a.m.–6:00 p.m.",
 } as const;
 
