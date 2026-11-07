@@ -39,7 +39,7 @@ export async function POST(request: Request) {
 
   const resend = new Resend(apiKey);
   const from =
-    process.env.CONTACT_FROM ?? "R. P. Jones Law <rpjlaw1@gmail.com>";
+    process.env.CONTACT_FROM ?? "R. P. Jones Law <consult@rpjoneslaw.com>";
 
   const { error } = await resend.emails.send({
     from,
@@ -56,6 +56,7 @@ export async function POST(request: Request) {
   });
 
   if (error) {
+    console.error("Resend error:", error);
     return NextResponse.json({ ok: false }, { status: 500 });
   }
 
