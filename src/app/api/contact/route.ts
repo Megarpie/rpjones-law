@@ -1,7 +1,8 @@
 import { isValidUsPhone } from "@/lib/phone";
 import { site } from "@/lib/site";
 import { NextResponse } from "next/server";
-import { Resend } from "resend";
+
+export const runtime = "nodejs";
 
 function clean(value: unknown, max = 2000) {
   if (typeof value !== "string") return "";
@@ -32,32 +33,52 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false }, { status: 400 });
   }
 
-  const apiKey = process.env.RESEND_API_KEY;
+  const apiKey = process.env.RESEND_API_KEY?.trim();
   if (!apiKey) {
-    return NextResponse.json({ ok: false }, { status: 500 });
+    console.error("Contact form: RESEND_API_KEY is not set");
+    return NextResponse.json(
+      { ok: false, error: "Email is not configured on the server." },
+      { status: 500 },
+    );
   }
 
-  const resend = new Resend(apiKey);
-  const from = "R. P. Jones Law <consult@rpjoneslaw.com>";
+  try {
+    const res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: "R. P. Jones Law <consult@rpjoneslaw.com>",
+        to: [site.email],
+        reply_to: email,
+        subject: `New consultation request from ${firstName} ${lastName}`,
+        text: [
+          `Name: ${firstName} ${lastName}`,
+          `Phone: ${phone}`,
+          `Email: ${email}`,
+          "",
+          message,
+        ].join("\n"),
+      }),
+    });
 
-  const { error } = await resend.emails.send({
-    from,
-    to: site.email,
-    replyTo: email,
-    subject: `New consultation request from ${firstName} ${lastName}`,
-    text: [
-      `Name: ${firstName} ${lastName}`,
-      `Phone: ${phone}`,
-      `Email: ${email}`,
-      "",
-      message,
-    ].join("\n"),
-  });
+    const payload = (await res.json().catch(() => null)) as {
+      message?: string;
+      name?: string;
+    } | null;
 
-  if (error) {
-    console.error("Resend error:", error);
-    return NextResponse.json({ ok: false }, { status: 500 });
+    if (!res.ok) {
+      const detail = payload?.message ?? payload?.name ?? `Resend ${res.status}`;
+      console.error("Contact form Resend error:", detail);
+      return NextResponse.json({ ok: false, error: detail }, { status: 500 });
+    }
+
+    return NextResponse.json({ ok: true });
+  } catch (error) {
+    const detail = error instanceof Error ? error.message : "Send failed";
+    console.error("Contact form send failed:", detail);
+    return NextResponse.json({ ok: false, error: detail }, { status: 500 });
   }
-
-  return NextResponse.json({ ok: true });
 }
