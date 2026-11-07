@@ -38,8 +38,7 @@ export async function POST(request: Request) {
   }
 
   const resend = new Resend(apiKey);
-  const from =
-    process.env.CONTACT_FROM ?? "R. P. Jones Law <consult@rpjoneslaw.com>";
+  const from = "R. P. Jones Law <consult@rpjoneslaw.com>";
 
   const { error } = await resend.emails.send({
     from,
